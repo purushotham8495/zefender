@@ -1,0 +1,224 @@
+/* =========================================
+   Scroll-Driven Story Section (Features Page)
+   ========================================= */
+
+.story-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 4rem;
+    position: relative;
+}
+
+/* Left Side: Text Content */
+.story-content {
+    flex: 1;
+    min-width: 300px;
+    padding-bottom: 50vh;
+    /* Extra space to allow scrolling past the last step */
+}
+
+.story-step {
+    min-height: 80vh;
+    /* Make each step tall enough to trigger scroll events */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.3;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.story-step.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.story-step .step-number {
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.5;
+    margin-bottom: 1rem;
+    transition: opacity 0.6s ease;
+}
+
+.story-step.active .step-number {
+    opacity: 1;
+}
+
+.story-step h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.story-step p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* Right Side: Sticky Visuals */
+.story-visual {
+    flex: 1;
+    min-width: 300px;
+    height: 100vh;
+    /* Take full viewport height */
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sticky-video-container {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 9/16;
+    /* Portrait aspect ratio suitable for videos */
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    background: var(--bg-secondary);
+    border: 1px solid var(--card-border);
+}
+
+.story-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.story-video.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Flow Diagram (End of Story) */
+.flow-diagram-section {
+    padding: 6rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 4rem;
+}
+
+.flow-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.flow-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    z-index: 2;
+    flex: 1;
+    min-width: 120px;
+}
+
+.flow-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--accent-primary);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.flow-node:hover .flow-icon {
+    transform: scale(1.1);
+    border-color: var(--accent-primary);
+    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.2);
+}
+
+.flow-node h4 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.flow-arrow {
+    flex: 0 0 auto;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    opacity: 0.5;
+    animation: flowPulse 2s infinite;
+}
+
+@keyframes flowPulse {
+
+    0%,
+    100% {
+        transform: translateX(0);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translateX(10px);
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 992px) {
+    .story-container {
+        flex-direction: column;
+    }
+
+    .story-visual {
+        position: static;
+        height: auto;
+        padding-bottom: 4rem;
+    }
+
+    .story-step {
+        min-height: auto;
+        padding: 4rem 0;
+    }
+
+    .flow-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+        animation: flowPulseVertical 2s infinite;
+    }
+
+    @keyframes flowPulseVertical {
+
+        0%,
+        100% {
+            transform: rotate(90deg) translateY(0);
+            opacity: 0.3;
+        }
+
+        50% {
+            transform: rotate(90deg) translateY(10px);
+            opacity: 0.8;
+        }
+    }
+}

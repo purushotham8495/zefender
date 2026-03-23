@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Demo | Zefender</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Demo Page Styling */
+
+        .demo-hero {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            text-align: center;
+        }
+
+        .demo-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .demo-hero p {
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* Demo Sections */
+
+        .demo-section {
+            padding: 80px 0;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .demo-card {
+            padding: 30px;
+        }
+
+        /* Booking Form */
+
+        .demo-form {
+            max-width: 650px;
+            margin: auto;
+            margin-top: 40px;
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-family: Inter;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .form-submit {
+            margin-top: 10px;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar scrolled">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-shield-check"></i>
+                Zefender
+            </a>
+
+            <div class="nav-links">
+
+                <a href="index.html#home">Home</a>
+                <a href="index.html#process">How It Works</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#contact">Contact</a>
+
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                    <i class="ph ph-sun" id="theme-icon"></i>
+                </button>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Hero -->
+
+
+
+
+    <!-- How Demo Works -->
+
+    <section class="demo-section">
+
+        <div class="container text-center">
+
+            <h2 class="section-title">How the Demo Works</h2>
+
+            <div class="demo-grid">
+
+                <div class="demo-card glass-card">
+
+                    <div class="card-preview">
+                        <video autoplay muted loop>
+                            <source src="mist.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <h3>1. Book a Slot</h3>
+
+                    <p>
+                        Choose a convenient time for your demo session.
+                    </p>
+
+                </div>
+
+                <div class="demo-card glass-card">
+
+                    <div class="card-preview">
+                        <video autoplay muted loop>
+                            <source src="session.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <h3>2. Join the Session</h3>
+
+                    <p>
+                        Attend online or visit our demo center.
+                    </p>
+
+                </div>
+
+                <div class="demo-card glass-card">
+
+                    <div class="card-preview">
+                        <video autoplay muted loop>
+                            <source src="machine.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <h3>3. Watch the Machine</h3>
+
+                    <p>
+                        See the full cleaning cycle from start to finish.
+                    </p>
+
+                </div>
+
+                <div class="demo-card glass-card">
+
+                    <div class="card-preview">
+                        <video autoplay muted loop>
+                            <source src="discussion.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <h3>4. Discuss Your Needs</h3>
+
+                    <p>
+                        Our team will help you explore implementation options.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Booking Form -->
+
+    <section class="demo-section">
+
+        <div class="container text-center">
+
+            <h2 class="section-title">Schedule Your Demo</h2>
+
+            <div class="demo-form glass-card">
+
+                <form>
+
+                    <div class="form-group">
+
+                        <label>Name</label>
+
+                        <input type="text" required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Email</label>
+
+                        <input type="email" required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Phone</label>
+
+                        <input type="tel">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Organization</label>
+
+                        <input type="text">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Demo Type</label>
+
+                        <select>
+
+                            <option>Online Demo</option>
+                            <option>In Person Demo</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Preferred Date</label>
+
+                        <input type="date">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Message</label>
+
+                        <textarea rows="4"></textarea>
+
+                    </div>
+
+                    <button class="btn btn-primary btn-lg form-submit">
+                        Book My Demo
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta-section section-padding">
+
+        <div class="container text-center">
+
+            <h2>Ready to experience Zefender?</h2>
+
+            <p>
+                Book your demo today and see the future of helmet hygiene.
+            </p>
+
+            <a href="#" class="btn btn-primary btn-lg mt-4">
+                Schedule Demo
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    <i class="ph-fill ph-shield-check"></i>
+                    Zefender
+                </a>
+
+                <p>The pioneer in automated helmet sanitation technology.</p>
+
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-youtube-logo"></i></a>
+                    <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                </div>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>Company</h4>
+
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Partner Program</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>Support</h4>
+
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Manuals</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h4>Get in Touch</h4>
+
+                <div class="contact-item">
+                    <i class="ph ph-envelope-simple"></i>
+                    <span>hello@zefender.com</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="ph ph-phone"></i>
+                    <span>+1 (800) 123-4567</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="ph ph-map-pin"></i>
+                    <span>123 Innovation Drive,<br>Tech District, CA 94103</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container">
+
+            <div class="footer-bottom">
+
+                <p>© 2026 Zefender Technologies. All rights reserved.</p>
+
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+        const cards = document.querySelectorAll(".demo-card");
+
+        cards.forEach(card => {
+
+            card.addEventListener("mousemove", e => {
+
+                const rect = card.getBoundingClientRect();
+
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+                card.style.setProperty("--mouse-x", x + "%");
+                card.style.setProperty("--mouse-y", y + "%");
+
+            });
+
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features | Zefender</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-shield-check"></i>
+                Zefender
+            </a>
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#process">How It Works</a>
+                <a href="features.html">Features</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                    <i class="ph ph-sun" id="theme-icon"></i>
+                </button>
+                <a href="index.html#demo" class="btn btn-primary">Book Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll-Driven Story Section -->
+    <section id="features" class="story-section section-padding" style="padding-top: 120px;">
+        <div class="container text-center reveal">
+            <h2 class="section-title">The Zefender Experience</h2>
+            <p class="section-subtitle">Seamless, automated, and secure from start to finish.</p>
+        </div>
+
+        <div class="container story-container mt-5">
+            <!-- Left Side: Text Steps -->
+            <div class="story-content">
+                <div class="story-step active" data-step="1">
+                    <div class="step-number">01</div>
+                    <h3>QR Code Payment</h3>
+                    <p>User scans the QR code on the helmet and completes payment securely and seamlessly.</p>
+                </div>
+                <div class="story-step" data-step="2">
+                    <div class="step-number">02</div>
+                    <h3>Insert Helmet</h3>
+                    <p>The helmet is safely placed inside the automated cleaning machine chamber.</p>
+                </div>
+                <div class="story-step" data-step="3">
+                    <div class="step-number">03</div>
+                    <h3>Smart Cleaning Process</h3>
+                    <p>Water spray, UV light, and temperature-controlled air circulation deeply clean the helmet.</p>
+                </div>
+                <div class="story-step" data-step="4">
+                    <div class="step-number">04</div>
+                    <h3>Helmet Ready</h3>
+                    <p>The machine opens automatically, and the user safely removes a fresh, clean helmet.</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Sticky Video -->
+            <div class="story-visual">
+                <div class="sticky-video-container glass-card">
+                    <video class="story-video active" data-video="1" autoplay loop muted playsinline>
+                        <source
+                            src="https://raw.githubusercontent.com/Varsha050807/helmet-cleaning-landing-page/main/mist.mp4"
+                            type="video/mp4">
+                    </video>
+                    <video class="story-video" data-video="2" autoplay loop muted playsinline>
+                        <source
+                            src="https://raw.githubusercontent.com/Varsha050807/helmet-cleaning-landing-page/main/sanitize.mp4"
+                            type="video/mp4">
+                    </video>
+                    <video class="story-video" data-video="3" autoplay loop muted playsinline>
+                        <source
+                            src="https://raw.githubusercontent.com/Varsha050807/helmet-cleaning-landing-page/main/dry.mp4"
+                            type="video/mp4">
+                    </video>
+                    <video class="story-video" data-video="4" autoplay loop muted playsinline>
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i class="ph-fill ph-shield-check"></i>
+                    Zefender
+                </a>
+                <p>The pioneer in automated helmet sanitation technology.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-youtube-logo"></i></a>
+                    <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Partner Program</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Manuals</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <div class="contact-item">
+                    <i class="ph ph-envelope-simple"></i>
+                    <span>hello@zefender.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="ph ph-phone"></i>
+                    <span>+1 (800) 123-4567</span>
+                </div>
+                <div class="contact-item">
+                    <i class="ph ph-map-pin"></i>
+                    <span>123 Innovation Drive,<br>Tech District, CA 94103</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zefender Technologies. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
